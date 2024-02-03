@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    width: 100%;
+    height: max-content;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.199), rgba(0, 0, 0, 0.856)), url("../images/signup-pagebg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* header */
+header .brand{
+    width: 190px;
+    margin: 25px 0 0 33px;
+}
+header nav img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.signin-form{
+    width: 450px;
+    margin: auto;
+    padding: 60px 68px 40px;
+    background-color: rgba(0, 0, 0, 0.678);
+    color: white;
+}
+table{
+    width: 100%;
+}
+table h1{
+    margin-bottom: 20px;
+    color: rgb(238, 238, 238);
+}
+td{
+    padding-bottom: 15px;
+}
+input:not(input[type="submit"], input[type="checkbox"]){
+    width: 100%;
+    padding: 15px 0 15px 20px;
+    background-color: rgb(49, 49, 49);
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-size: 1em;
+    color: white;
+}
+::placeholder {
+    font-weight: 600;
+    color: rgb(192, 192, 192);
+ }
+input[type="submit"]{
+    width: 100%;
+    padding: 15px 0;
+    background: #e50914;
+    outline: none;
+    border: none;
+    font-size: 1.1em;
+    border-radius: 5px;
+    color: white;
+    margin-top: 25px;
+    transition: .3s;
+}
+input[type="submit"]:hover{
+    background: #ad020a;
+}
+input[type="checkbox"]{
+    margin: 0 5px;
+}
+.cb,.fp{
+    font-size: 0.9em;
+    color: rgb(168, 168, 168);
+}
+a{
+    text-decoration: none;
+}
+.fp{
+    margin-left: 80px;
+}
+.fp:hover, .st a:hover{
+    text-decoration: underline;
+}
+.st{
+    font-size: 1em;
+    font-weight: 500;
+    padding-top: 40px;
+}
+.st a{
+    color: snow;
+}
+.st p{
+    color: rgb(128, 128, 128);
+}
+
+
+/* footer */
+footer{
+    margin-top: 100px;
+    padding: 40px 0 40px 200px;
+    background-color: rgba(0, 0, 0, 0.712);
+}
+footer h3{
+    color: rgb(114, 114, 114);
+}
+.foot-row{
+    margin: 30px 0 10px 0;
+}
+.foot-col{
+    margin-bottom: 10px;
+}
+.foot-col a{
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: normal;
+    color: rgb(97, 97, 97);
+    margin-right: 100px;
+}

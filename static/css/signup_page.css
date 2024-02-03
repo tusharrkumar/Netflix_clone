@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+th{
+    display: none;
+}
+/* Header */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(219, 219, 219);
+}
+header a{
+    margin-right: 50px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #474747;
+}
+header .brand{
+    width: 180px;
+}
+header .brand img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin: 15px 0 15px 40px;
+}
+
+/* Form */
+.pass{
+    color: #797979;
+    position: relative;
+    top: 91px;
+    left: 317px;
+}
+form{
+    width: 100%;
+}
+.signup-form{
+    width: 400px;
+    margin: 40px auto 100px auto;
+}
+h1{
+    color: #333;
+    font-weight: 600;
+}
+h3{
+    color: #333;
+    font-weight: 100;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+form input{
+    font-size: 1em;
+    width: 393px;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+input[type="password"]:hover .pass{
+    z-index: -1;
+}
+form input:not(input[type="submit"]){
+    border: 1px solid rgb(116, 116, 116);
+}
+form input:focus{
+    outline: none;
+}
+form input[type="submit"]{
+    font-size: 1.4em;
+    padding: 15px 0;
+    background-color: #e50914;
+    color: white;
+    border: none;
+}
+form input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: #bb0009;
+}
+
+/* Footer */
+footer{
+    padding: 40px 0 40px 60px;
+    background-color: rgba(224, 224, 224, 0.712);
+}
+footer h3{
+    color: rgb(114, 114, 114);
+}
+.foot-row{
+    margin: 30px 0 10px 0;
+}
+.foot-col{
+    margin-bottom: 10px;
+}
+.foot-col a{
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: normal;
+    color: rgb(97, 97, 97);
+    margin-right: 100px;
+}

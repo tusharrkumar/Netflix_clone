@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="{% static 'css/profile.css' %}" />
+		<link rel="stylesheet" href="{% static 'fonts/css/all.min.css' %}">
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="nav-left">
+				<div class="logo">
+					<img src="{% static 'images/netflix-logo.png' %}" alt="" />
+				</div>
+				<ul>
+					<li><a href="{% url 'main_page' %}">Home</a></li>
+					<li><a href="{% url 'tvshows' %}">TV Shows</a></li>
+					<li><a href="{% url 'movies' %}">Movies</a></li>
+					<li><a href="{% url 'new_popular' %}">New & Popular</a></li>
+					<!-- <li><a href="#">My List</a></li> -->
+				</ul>
+			</div>
+			<div class="nav-right">
+				<input type="search" name="" id="" />
+				<a href="#"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff"></i></a>
+				<p><a href="{% url 'children' %}">Children</a></p>
+				<i class="fa-regular fa-bell" style="color: #ffffff"></i>
+				<div class="profile">
+					<img src="{% static 'images/profile.jpg' %}" alt="" />
+				</div>
+				<div class="dropdown">
+					<i class="fa-solid fa-caret-down dropbtn" style="color: #ffffff"></i>
+					<div class="dropdown-content">
+						<a href="{% url 'profile' %}">Account</a>
+						<a href="{% url 'change_password' %}">Change Password</a>
+						<a href="{% url 'user_logout' %}">Logout</a>
+						<a href="#">Help Center</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="profile-box">
+			<h1>Account</h1>
+			<hr />
+			<div class="pro-box">
+				<div class="left-sec">
+					<h3>MEMBERSHIP & BILLING</h3>
+					<button>Coming Soon</button>
+				</div>
+				<div class="right-sec">
+					<table>
+						<tr>
+							<td><span>Username:</span> {{UO.username}}</td>
+						</tr>
+						<tr>
+							<td><span>Email:</span> {{UO.email}}</td>
+						</tr>
+						<tr>
+							<td><span>Card:</span> **** **** **** ****</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<hr />
+			<div class="pro-box box-2">
+				<div class="left-sec">
+					<h3>PLAN DETAILS</h3>
+				</div>
+				<div class="right-sec">
+					<span class="premium">Premium</span><span class="ultrahd">ULTRA <span class="hd">HD</span></span>
+				</div>
+			</div>
+			<hr />
+			<div class="pro-box box-3">
+				<div class="left-sec">
+					<h3>SECURITY & PRIVACY</h3>
+				</div>
+				<div class="right-sec">
+					<p>Control access to this account, view the most recently active devices and more.</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

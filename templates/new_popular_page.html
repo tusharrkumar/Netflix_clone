@@ -1,0 +1,370 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="shortcut icon" href="{% static 'images/img/netflix_icon.png' %}" type="image/x-icon" />
+		<link rel="stylesheet" href="{% static 'css/new_popular_page.css' %}" type="text/css" />
+		<link rel="stylesheet" href="{% static 'fonts/css/all.min.css' %}">
+	</head>
+
+	<body>
+
+		<div class="top-header">
+			{% if user.is_authenticated %}
+				<div class="navbar">
+					<div class="nav-left">
+						<div class="logo">
+							<a href="{% url 'main_page' %}"><img src="{% static 'images/netflix-logo.png' %}" alt="" /></a>
+						</div>
+						<ul>
+							<li><a href="{% url 'main_page' %}">Home</a></li>
+							<li><a href="{% url 'tvshows' %}">TV Shows</a></li>
+							<li><a href="{% url 'movies' %}">Movies</a></li>
+							<li><a href="{% url 'new_popular' %}">New & Popular</a></li>
+							<!-- <li><a href="#">My List</a></li> -->
+						</ul>
+					</div>
+					<div class="nav-right">
+						<input type="search" name="" id="" />
+						<a href="#"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff"></i></a>
+						<p><a href="{% url 'children' %}">Children</a></p>
+						<i class="fa-regular fa-bell" style="color: #ffffff"></i>
+						<div class="profile">
+							<img src="{% static 'images/profile.jpg' %}" alt="" />
+						</div>
+						<div class="dropdown">
+							<i class="fa-solid fa-caret-down dropbtn" style="color: #ffffff"></i>
+							<div class="dropdown-content">
+								<a href="{% url 'profile' %}">Account</a>
+								<a href="{% url 'change_password' %}">Change Password</a>
+								<a href="{% url 'user_logout' %}">Logout</a>
+								<a href="#">Help Center</a>
+							</div>
+						</div>
+					</div>
+				</div>			
+			{% endif %}
+		</div>
+
+        <div class="header">
+			<h3 class="title">The Top 10 Hits</h3>
+		</div>
+		<div class="slider-no" id="slider-no">
+			<div class="slide" id="slide">
+				<img class="item mr" src="{% static 'images/top10/netflix1.png' %}" width="200px" />
+				<img class="item-side" src="{% static 'images/top10/no1.jpg' %}" width="140px" />
+				<img class="item mr" src="{% static 'images/top10/netflix2.png' %}" width="200px" />
+				<img class="item-side" src="{% static 'images/top10/no2.jpg' %}" width="140px" />
+				<img class="item mr" src="{% static 'images/top10/netflix3.png' %}" width="200px" />
+				<img class="item-side" src="{% static 'images/top10/no3.jpg' %}" width="140px" />
+				<img class="item mr" src="{% static 'images/top10/netflix4.png' %}" width="200px" />
+				<img class="item-side" src="{% static 'images/top10/no4.jpg' %}" width="140px" />
+				<img class="item mr" src="{% static 'images/top10/netflix5.png' %}" width="200px" />
+				<img class="item-side" src="{% static 'images/top10/no5.jpg' %}" width="140px" />
+				<img class="item mr" src="{% static 'images/top10/netflix6.png' %}" width="200px" />
+				<img class="item-side" src="{% static 'images/top10/no6.jpg' %}" width="140px" />
+				<img class="item mr" src="{% static 'images/top10/netflix7.png' %}" width="200px" />
+				<img class="item-side" src="{% static 'images/top10/no7.jpg' %}" width="140px" />
+				<img class="item mr" src="{% static 'images/top10/netflix8.png' %}" width="200px" />
+				<img class="item-side" src="{% static 'images/top10/no8.jpg' %}" width="140px" />
+				<img class="item mr" src="{% static 'images/top10/netflix9.png' %}" width="200px" />
+				<img class="item-side" src="{% static 'images/top10/no9.jpg' %}" width="140px" />
+				<img class="item mr" src="{% static 'images/top10/netflix10.png' %}" width="200px" />
+				<img class="item-side" src="{% static 'images/top10/no10.jpg' %}" width="140px" />
+			</div>
+			<button class="ctrl-btn pro-prev">&#8249;</button>
+			<button class="ctrl-btn pro-next">&#8250;</button>
+		</div>
+
+        <div class="header">
+			<h3 class="title">The Top 10 Movies</h3>
+		</div>
+		<div class="slider-no" id="slider-no">
+			<div class="slide" id="slide">
+				<img class="item mr" src="{% static 'images/top10/netflix1.png' %}" width="200px" />
+				<img class="item-side" src="{% static 'images/top10/mt1.jpg' %}" width="150px" />
+				<img class="item mr" src="{% static 'images/top10/netflix2.png' %}" width="200px" />
+				<img class="item-side" src="{% static 'images/top10/mt2.jpg' %}" width="150px" />
+				<img class="item mr" src="{% static 'images/top10/netflix3.png' %}" width="200px" />
+				<img class="item-side" src="{% static 'images/top10/mt3.jpg' %}" width="150px" />
+				<img class="item mr" src="{% static 'images/top10/netflix4.png' %}" width="200px" />
+				<img class="item-side" src="{% static 'images/top10/mt4.jpg' %}" width="150px" />
+				<img class="item mr" src="{% static 'images/top10/netflix5.png' %}" width="200px" />
+				<img class="item-side" src="{% static 'images/top10/mt5.jpg' %}" width="150px" />
+				<img class="item mr" src="{% static 'images/top10/netflix6.png' %}" width="200px" />
+				<img class="item-side" src="{% static 'images/top10/mt6.jpg' %}" width="150px" />
+				<img class="item mr" src="{% static 'images/top10/netflix7.png' %}" width="200px" />
+				<img class="item-side" src="{% static 'images/top10/mt7.jpg' %}" width="150px" />
+				<img class="item mr" src="{% static 'images/top10/netflix8.png' %}" width="200px" />
+				<img class="item-side" src="{% static 'images/top10/mt8.jpg' %}" width="150px" />
+				<img class="item mr" src="{% static 'images/top10/netflix9.png' %}" width="200px" />
+				<img class="item-side" src="{% static 'images/top10/mt9.jpg' %}" width="150px" />
+				<img class="item mr" src="{% static 'images/top10/netflix10.png' %}" width="200px" />
+				<img class="item-side" src="{% static 'images/top10/mt10.jpg' %}" width="150px" />
+			</div>
+			<button class="ctrl-btn pro-prev">&#8249;</button>
+			<button class="ctrl-btn pro-next">&#8250;</button>
+		</div>
+
+
+        <div class="header">
+			<h3 class="title">The Top 10 TV Series</h3>
+		</div>
+		<div class="slider-no" id="slider-no">
+			<div class="slide" id="slide">
+				<img class="item mr" src="{% static 'images/top10/netflix1.png' %}" width="200px" />
+				<img class="item-side" src="{% static 'images/top10/st1.jpg' %}" width="140px" />
+				<img class="item mr" src="{% static 'images/top10/netflix2.png' %}" width="200px" />
+				<img class="item-side" src="{% static 'images/top10/st2.jpg' %}" width="140px" />
+				<img class="item mr" src="{% static 'images/top10/netflix3.png' %}" width="200px" />
+				<img class="item-side" src="{% static 'images/top10/st3.jpg' %}" width="140px" />
+				<img class="item mr" src="{% static 'images/top10/netflix4.png' %}" width="200px" />
+				<img class="item-side" src="{% static 'images/top10/st4.jpg' %}" width="140px" />
+				<img class="item mr" src="{% static 'images/top10/netflix5.png' %}" width="200px" />
+				<img class="item-side" src="{% static 'images/top10/st5.jpg' %}" width="140px" />
+				<img class="item mr" src="{% static 'images/top10/netflix6.png' %}" width="200px" />
+				<img class="item-side" src="{% static 'images/top10/st6.jpg' %}" width="140px" />
+				<img class="item mr" src="{% static 'images/top10/netflix7.png' %}" width="200px" />
+				<img class="item-side" src="{% static 'images/top10/st7.jpg' %}" width="140px" />
+				<img class="item mr" src="{% static 'images/top10/netflix8.png' %}" width="200px" />
+				<img class="item-side" src="{% static 'images/top10/st8.jpg' %}" width="140px" />
+				<img class="item mr" src="{% static 'images/top10/netflix9.png' %}" width="200px" />
+				<img class="item-side" src="{% static 'images/top10/st9.jpg' %}" width="140px" />
+				<img class="item mr" src="{% static 'images/top10/netflix10.png' %}" width="200px" />
+				<img class="item-side" src="{% static 'images/top10/st10.jpg' %}" width="140px" />
+			</div>
+			<button class="ctrl-btn pro-prev">&#8249;</button>
+			<button class="ctrl-btn pro-next">&#8250;</button>
+		</div>
+        
+
+		<div class="row">
+			<div class="header">
+				<h3 class="title">Trending</h3>
+				<div class="progress-bar"></div>
+			</div>
+			<div class="container">
+				<button class="handle left-handle">
+					<div class="text">&#8249;</div>
+				</button>
+				<div class="slider">
+					{% for images in trending %}
+					<img src="{{images.flyer.url}}" alt="not found" width="210px" />
+					{% endfor %}
+				</div>
+				<button class="handle right-handle">
+					<div class="text">&#8250;</div>
+				</button>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="header">
+				<h3 class="title">Block Buster Hits</h3>
+				<div class="progress-bar"></div>
+			</div>
+			<div class="container">
+				<button class="handle left-handle">
+					<div class="text">&#8249;</div>
+				</button>
+				<div class="slider">
+					{% for images in blockbuster %}
+					<img src="{{images.flyer.url}}" alt="not found" width="210px" />
+					{% endfor %}
+				</div>
+				<button class="handle right-handle">
+					<div class="text">&#8250;</div>
+				</button>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="header">
+				<h3 class="title">Popular</h3>
+				<div class="progress-bar"></div>
+			</div>
+			<div class="container">
+				<button class="handle left-handle">
+					<div class="text">&#8249;</div>
+				</button>
+				<div class="slider">
+					{% for images in popular %}
+					<img src="{{images.flyer.url}}" alt="not found" width="210px" />
+					{% endfor %}
+				</div>
+				<button class="handle right-handle">
+					<div class="text">&#8250;</div>
+				</button>
+			</div>
+		</div>
+
+        <div class="row">
+			<div class="header">
+				<h3 class="title">Popular Movies</h3>
+				<div class="progress-bar"></div>
+			</div>
+			<div class="container">
+				<button class="handle left-handle">
+					<div class="text">&#8249;</div>
+				</button>
+				<div class="slider">
+					{% for images in mpopular %}
+					<img src="{{images.flyer.url}}" alt="not found" width="210px" />
+					{% endfor %}
+				</div>
+				<button class="handle right-handle">
+					<div class="text">&#8250;</div>
+				</button>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="header">
+				<h3 class="title">Top Trending Movies</h3>
+				<div class="progress-bar"></div>
+			</div>
+			<div class="container">
+				<button class="handle left-handle">
+					<div class="text">&#8249;</div>
+				</button>
+				<div class="slider">
+					{% for images in mtrending %}
+					<img src="{{images.flyer.url}}" alt="not found" width="210px" />
+					{% endfor %}
+				</div>
+				<button class="handle right-handle">
+					<div class="text">&#8250;</div>
+				</button>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="header">
+				<h3 class="title">Romantic Movies</h3>
+				<div class="progress-bar"></div>
+			</div>
+			<div class="container">
+				<button class="handle left-handle">
+					<div class="text">&#8249;</div>
+				</button>
+				<div class="slider">
+					{% for images in mromantic %}
+					<img src="{{images.flyer.url}}" alt="not found" width="210px" />
+					{% endfor %}
+				</div>
+				<button class="handle right-handle">
+					<div class="text">&#8250;</div>
+				</button>
+			</div>
+		</div>
+
+        <div class="row">
+			<div class="header">
+				<h3 class="title">Award Winning TV Shows</h3>
+				<div class="progress-bar"></div>
+			</div>
+			<div class="container">
+				<button class="handle left-handle">
+					<div class="text">&#8249;</div>
+				</button>
+				<div class="slider">
+					{% for images in award %}
+					<img src="{{images.flyer.url}}" alt="not found" width="210px" />
+					{% endfor %}
+				</div>
+				<button class="handle right-handle">
+					<div class="text">&#8250;</div>
+				</button>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="header">
+				<h3 class="title">Top Trending Series</h3>
+				<div class="progress-bar"></div>
+			</div>
+			<div class="container">
+				<button class="handle left-handle">
+					<div class="text">&#8249;</div>
+				</button>
+				<div class="slider">
+					{% for images in strending %}
+					<img src="{{images.flyer.url}}" alt="not found" width="210px" />
+					{% endfor %}
+				</div>
+				<button class="handle right-handle">
+					<div class="text">&#8250;</div>
+				</button>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="header">
+				<h3 class="title">TV Dramas</h3>
+				<div class="progress-bar"></div>
+			</div>
+			<div class="container">
+				<button class="handle left-handle">
+					<div class="text">&#8249;</div>
+				</button>
+				<div class="slider">
+					{% for images in tvdrama %}
+					<img src="{{images.flyer.url}}" alt="not found" width="210px" />
+					{% endfor %}
+				</div>
+				<button class="handle right-handle">
+					<div class="text">&#8250;</div>
+				</button>
+			</div>
+		</div>
+
+		<footer>
+			<div class="footer-icons">
+				<span><i class="fa-brands fa-facebook-f"></i></span>
+				<span><i class="fa-brands fa-instagram"></i></span>
+				<span><i class="fa-brands fa-twitter"></i></span>
+				<span><i class="fa-brands fa-youtube"></i></span>
+			</div>
+
+			<div class="footer-row">
+				<div class="footer-col">
+					<a href="#">FAQ</a>
+					<a href="#">Media Center</a>
+					<a href="#">Ways to Watch</a>
+					<a href="#">Cookie Preferences</a>
+					<a href="#">Speed Test</a>
+				</div>
+				<div class="footer-col">
+					<a href="#">Help Centre</a>
+					<a href="#">Investor Relations</a>
+					<a href="#">Terms of Use</a>
+					<a href="#">Corporate Information</a>
+					<a href="#">Legal Notices</a>
+				</div>
+				<div class="footer-col">
+					<a href="#">Account</a>
+					<a href="#">Jobs</a>
+					<a href="#">Privacy</a>
+					<a href="#">Contact Us</a>
+					<a href="#">Only on Netflix</a>
+				</div>
+			</div>
+			<button type="button" class="btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown">
+				Service Code
+			</button>
+
+			<p>&copy; 1997-2023 Netflix, Inc. by Arnab Acharya</p>
+		</footer>
+
+		<script src="{% static 'js/main_page.js' %}"></script>
+	</body>
+</html>

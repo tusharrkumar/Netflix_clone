@@ -1,0 +1,662 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+.myborder{
+    position: relative;
+    height: 8px;
+    background-color: #313131c9;
+    width: 1366px;
+    left: -164px;
+    margin: 20px 0;
+}
+
+
+/*% -----Heading section----- */
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.568),rgba(0,0,0,0.7)), url('/static/images/netflix_home_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 10px 8%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+i{
+    color: white;
+    font-size: 12px;
+    margin: 0 10px 0 0;
+}
+.logo{
+    width: 150px;
+}
+.btn-outline-light{
+    border: 1px solid white;
+    padding: 8px 12px;
+    text-transform: capitalize;
+}
+nav .btn-danger{
+    background-color: #db0001;
+    color: #fff;
+    box-shadow: none;
+    margin-left: 20px !important;
+    text-transform: capitalize;
+}
+.btn-danger:hover{
+    background-color: #b30000;
+    box-shadow: none !important;
+}
+nav button a{
+    text-decoration: none;
+    color: white;
+    
+}
+.header-content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 100px;
+}
+.header-content h1{
+    font-size: 3.2em;
+    line-height: 70px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.header-content h3{
+    font-weight: 400;
+    margin-bottom: 30px;
+    font-size: 1.6em;
+}
+.header-content p{
+    font-weight: 200;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+}
+.email-signup{
+    width: 43%;
+    margin: auto;
+    /* background: rgba(8, 8, 8, 0.678); */
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.email-signup input{
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+.email-signup input[type="email"]{
+    height: 54px;
+    width: 70%;
+    padding: 0 0 0 20px ;
+    background-color: #0000008f;
+    border: 1px solid grey;
+    color: white;
+    font-size: 1.1em;
+}
+.email-signup input[type="submit"]{
+    width: 30%;
+    background: #db0001;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 1.3em;
+    cursor: pointer;
+    padding: 10px 30px;
+    transition: .5s;
+}
+.email-signup input[type="submit"]:hover{
+    background: #8d0000;
+}
+
+
+/*% -----body section----- */
+
+.features{
+    padding: 40px 12%;
+    font-size: 1.375em;
+    border-top: 8px solid #313131c9;
+    color: white;
+}
+.feature-row{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+.text-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+    position: relative;
+}
+.img-col .fe1-base{
+    display: block;
+    width: 90%;
+    margin: auto;
+    z-index: 1;
+
+    object-fit: cover;
+    object-position: bottom;
+}
+.features h2{
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.fe1{
+    position: absolute;
+    top: 71px;
+    width: 67%;
+    left: 87px;
+    z-index: -1;
+    object-fit: inherit;
+    object-position: left;
+}
+.fe3{
+    position: absolute;
+    top: 38px;
+    width: 55%;
+    left: 114px;
+    z-index: -1;
+}
+.trans{
+    visibility: hidden;
+}
+.fe4{
+    position: absolute;
+    top: 71px;
+    width: 67%;
+    left: 87px;
+    z-index: -1;
+    object-fit: inherit;
+    object-position: left;
+    
+    top: -57px;
+    left: 82px;
+    width: 60%;
+}
+.ph{
+    border: 2px solid rgb(150, 150, 150);
+    border-radius: 15px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px 10px 15px;
+    background-color: black;
+    color: white;
+
+    position: relative;
+    left: 107px;
+    top: -115px;
+}
+.pic img{
+    width: 100%;
+}
+.pic{
+    width: 50px;
+}
+.load{
+    width: 60px;
+}
+.ph-in{
+    margin: 0 15px;
+}
+.bl{
+    color: rgb(0, 110, 255);
+}
+.ph-in p{
+    margin: 0;
+    font-size: 0.8em;
+}
+
+
+
+
+
+/*% -----FAQ section----- */
+
+.faq{
+    padding: 60px 12% 10px 12%;
+    text-align: center;
+    font-size: 18px;
+
+    margin-top: 10px;
+    border-top: 8px solid #313131c9;
+}
+.faq h2{
+    font-weight: 800;
+    font-size: 2.5em;
+}
+.accordion{
+    margin: 50px 0;
+    background-color: rgb(63, 63, 63);
+}
+
+.accordion-item{
+    font-size: 1.1em;
+    margin-bottom: 15px !important;
+    background-color: rgb(49, 49, 49);
+}
+.accordion-button{
+    padding: 22px;
+    font-size: 0.5em;
+}
+.accordion-button, .accordion-body, .accordion-button-active-color, .accordion-button-color{
+    color: white;
+}
+
+.accordion-button::after {background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); }
+
+.accordion-flush {
+    --mdb-accordion-flush-btn-box-shadow: inset 0 0 0 #f5f5f5;
+    --mdb-accordion-flush-border-bottom: 2px solid black;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #ffffff;
+    background-color: rgb(43, 43, 43);
+}
+.accordion-button:hover{
+    background-color: rgb(68, 68, 68);
+}
+.accordion-body{
+    text-align: justify;
+}
+
+/* background color of accordian item when collapsed */
+
+/* .accordion-button.collapsed {
+    background: blue
+  } */
+
+/* FAQ Form */
+
+.faq .email-signup{
+    width: 70%;
+}
+
+/*% Footer Section */
+
+footer{
+    margin-top: 60px;
+    padding: 60px 15% 10px;
+    border-top: 8px solid #313131c9;
+    color: #aaaaaa;
+}
+.footer-row{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 0;
+}
+footer .footer-col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+footer .footer-col a{
+    display: block;
+    text-decoration: underline;
+    color: rgb(165, 165, 165);
+    margin-bottom: 10px;
+    font-size: 0.9em;
+
+}
+footer .footer-row{
+    align-items: flex-start;
+    padding: 10px 0;
+}
+
+
+/*---------- Media Queries */
+
+@media only screen and (max-width: 992px){
+
+    /* Header */
+    header{
+        height: 67vh;
+    }
+    .header-content {
+        top: 39%;
+    }
+    .header-content h1 {
+        font-size: 2.2em;
+        line-height: 22px;
+        font-weight: 600;
+    }
+    .email-signup {
+        width: 75%;
+    }
+    .email-signup input {
+        margin-left: 10px;
+    }
+    .email-signup input[type="email"] {
+        background-color: #0000008f;
+    }
+
+    /* fearure */
+    .features {
+        padding: 40px 5%;
+        font-size: 1.2em;
+    }
+    .features h2 {
+        font-size: 1.7em;
+    }
+    .fe1 {
+        position: absolute;
+        top: 48px;
+        left: 59px;
+    }
+    .ph {
+        left: 67px;
+        top: -83px;
+    }
+    .fe3 {
+        top: 30px;
+        left: 92px;
+    }
+
+    /* FAQ */
+    .faq {
+        padding: 60px 4% 10px;
+        font-size: 13px;
+    }
+    .email-signup input[type="submit"] {
+        padding: 14px 30px;
+    }
+    .faq p{
+        font-size: 1.4em;
+    }
+    /* Footer */
+    footer {
+        padding: 60px 5% 10px;
+    }
+
+}
+
+@media only screen and (max-width: 768px){
+
+    /* header */
+    
+    header {
+        height: 67vh;
+        background-size: cover;
+        background-position: center;
+        padding: 10px 4%;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.93),rgba(0, 0, 0, 0.39),rgba(0, 0, 0, 0.932)), url('/static/images/netflix_home_bg.jpg');
+    }
+    .logo {
+        width: 110px;
+    }
+    nav .btn-danger {
+        margin-left: 0px !important;
+    }
+    .header-content {
+        top: 34%;
+        width: 100%;
+    }
+    .header-content h1 {
+        font-size: 2.1em;
+        font-weight: 700;
+        margin-bottom: 6px;
+    }
+    .header-content h3 {
+        font-weight: 100;
+        margin-bottom: 32px;
+        font-size: 1.2em;
+    }
+    .header-content p {
+        font-weight: normal;
+        margin-bottom: 18px;
+        font-size: 1.1em;
+    }
+    .email-signup {
+        width: 75%;
+    }
+    .email-signup input[type="email"] {
+        background-color: #0000007d;
+    }
+    .email-signup input {
+        margin-left: 5px;
+    }
+
+    /* Feature */
+
+    .features {
+        padding: 40px 0%;
+        font-size: 1em;
+    }
+    .feature-row {
+        flex-direction: column;
+        text-align: center;
+        width: 95%;
+        margin-left: 20px;
+    }
+    .features h2 {
+        font-size: 2em;
+        font-weight: 800;
+        margin-bottom: 20px;
+    }
+    .fe3 {
+        top: 46px;
+        left: 139px;
+    }
+    .fe4 {
+        width: 47%;
+        top: -14px;
+        left: 154px;
+    }
+    .fe1 {
+        top: 89px;
+        left: 100px;
+    }
+    .ph {
+        width: 53%;
+        left: 175px;
+        top: -115px;
+    }
+    .ph-in {
+        margin-left: -106px;
+        text-align: left;
+    }
+    .ph-in p {
+        font-size: 0.91em;
+    }
+    .ph-in .ph-in-1{
+        font-size: 1em;
+    }
+    .text-col {
+        order: -1;
+    }
+
+    /* FAQ */
+    .faq {
+        padding: 60px 4% 10px;
+    }
+    .faq h2 {
+        font-weight: 800;
+        font-size: 2em;
+    }
+    .faq .email-signup {
+        width: 84%;
+    }
+    .email-signup input[type="email"], .email-signup input[type="submit"]{
+        font-size: 1em;
+    }
+    .email-signup input[type="submit"] {
+        padding: 12px 30px;
+    }
+    /* Footer */
+    footer {
+        padding: 60px 4% 10px;
+    }
+}  
+
+
+
+@media only screen and (max-width: 600px){
+
+}
+
+
+@media only screen and (max-width: 370px){
+    body{
+        overflow-x: hidden;
+    }
+    header{
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.486),rgba(0, 0, 0, 0.541), rgba(0, 0, 0, 0.89)), url('/static/images/netflix_home_bg.jpg');
+        height: 67vh;
+    }
+    .logo{
+        width: 100px;
+    }
+    .head-btn{
+        display: flex;
+    }
+    nav .btn-outline-light,.btn-danger{
+        padding: 5px 10px;
+    }
+    nav .btn-danger {
+        margin-left: 7px !important;
+    }
+    .header-content{
+        width: 80%;
+        top: 36%;
+    }
+    .header-content h1{
+        font-size: 1.8em;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 18px;
+    }
+    .header-content h3 {
+        font-size: 1.3em;
+        width: 315px;
+        margin-left: -6px;
+        margin-bottom: 21px;
+    }
+    .header-content p {
+        font-weight: 300;
+        margin-bottom: 10px;
+        font-size: 1.1em;
+        width: 271px;
+        margin-left: 14px;
+    }
+    .myborder{
+        display: none;
+    }
+    .email-signup {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .email-signup input[type="email"] {
+        height: 45px;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 10px;
+        background-color: #0000009e;
+    }
+    .email-signup input[type="submit"] {
+        width: 50%;
+        font-size: 1.1em;
+        padding: 6px 0px;
+        margin: 0;
+    }
+    /* features */
+    .features{
+        padding: 40px 5%;
+    }
+    .text-col{
+        order: -1;
+    }
+    .text-col,.img-col{
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .features h2 {
+        font-size: 1.3em;
+    }
+    .features p{
+        margin: 0;
+        font-size: 0.8em;
+    }
+    .ph{
+        left: 21px;
+        top: -47px;
+    }
+    .fe1 {
+        top: 48px;
+        left: 57px;
+    }
+    .fe3 {
+        top: 25px;
+        left: 74px;
+    }
+    .fe4 {
+        top: -20px;
+    }
+
+    /* FAQ */
+    .faq h2 {
+        font-size: 1.6em;
+    }
+    .accordion {
+        margin: 30px 0;
+    }
+    .faq {
+        padding: 60px 6% 10px;
+    }
+    .accordion-item {
+        margin-bottom: 5px !important;
+    }
+    .accordion-body {
+        font-size: 0.9em;
+        text-align: left;
+    }
+    .faq .email-signup {
+        width: 91%;
+        font-size: 0.7em;
+    }
+
+    /* Footer */
+    footer {
+        padding: 60px 6% 10px;
+    }
+    footer .footer-row {
+        display: block;
+        padding: 0;
+    }
+    footer .footer-col {
+        margin-bottom: 10px;
+    }
+}
+
+

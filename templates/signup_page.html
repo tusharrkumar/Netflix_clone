@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sign Up</title>
+		<link rel="stylesheet" href="{% static 'css/signup_page.css' %}" />
+	</head>
+	<body>
+		<header>
+			<div class="brand">
+				<img src="{% static 'images/netflix-logo.png' %}" alt="" />
+			</div>
+			<a href="{% url 'signin' %}">Sign in</a>
+		</header>
+		
+		<div class="signup-form">
+			<h1>Welcome !</h1>
+			<h1>Joining Netflix is easy.</h1>
+			<h3>
+				Just a few more steps and you're done! <br />
+				We hate paperwork, too. <br /><br />
+				{% if entered_mail %} You are using <u>{{entered_mail}}</u> to sign up... {% else %} Let's get going...
+				{% endif %}
+			</h3>
+			<form method="POST" action="{% url 'signup' %}">
+				{% csrf_token %}
+				<table>
+					<tr>
+						{{SFO}}
+					</tr>
+					<tr>
+						<td><input type="submit" value="Next" /></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<footer>
+			<h3>Questions? Call 000-800-919-1694</h3>
+			<div class="foot-row">
+				<div class="foot-col">
+					<a href="#">FAQ</a>
+					<a href="#">Help Center</a>
+					<a href="#">Netflix Shop</a>
+					<a href="#">Terms of Use</a>
+				</div>
+				<div class="foot-col">
+					<a href="#">Privacy</a>
+					<a href="#">Cookie Preference</a>
+					<a href="#">Corporate information</a>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
